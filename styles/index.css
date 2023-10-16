@@ -97,7 +97,24 @@ body {
     transform: translate(-50%, 0%); */
     margin: 3vh;
     font-size: 5vh;
+    color: rgb(0, 47, 255);
+    text-shadow: 0 0 7px rgb(0, 47, 255),
+                 0 0 12px rgb(120, 180, 255);
+    animation: banner-color 2s, ease-out;
+    user-select: none;
 }
 .banner-text:nth-child(2) {
     transform: translate(40%, 0%);
+}
+
+@keyframes banner-color {
+    from {
+        color: rgb(0, 221, 255);
+        text-shadow: 0 0 3px rgb(0, 221, 255);
+    }
+    to {
+        color: rgb(0, 47, 255);
+        text-shadow: 0 0 7px rgb(0, 47, 255),
+                     0 0 12px rgb(120, 180, 255);
+    }
 }

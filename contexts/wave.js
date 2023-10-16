@@ -37,7 +37,7 @@
 //         gradientDown.addColorStop(0.2, 'rgba(176, 224, 230, 0.2)');
 //         gradientDown.addColorStop(0.8, 'rgba(176, 224, 230, 0.2)');
 //         gradientDown.addColorStop(1, 'rgba(176, 224, 230, 0)');
-        
+
 
 //         ctx.shadowBlur = 20;
 //         ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
@@ -144,18 +144,32 @@ function drawWaves() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     waves.forEach(wave => {
+        
+        // light blue
+        // const gradientUp = ctx.createLinearGradient(canvas.width / 2, 0, canvas.width / 2, wave.yOffset);
+        // gradientUp.addColorStop(0, 'rgba(173, 216, 230, 0)');
+        // gradientUp.addColorStop(0.2, 'rgba(173, 216, 230, 0.2)');
+        // gradientUp.addColorStop(0.8, 'rgba(173, 216, 230, 0.2)');
+        // gradientUp.addColorStop(1, 'rgba(173, 216, 230, 0)');
+
+        // const gradientDown = ctx.createLinearGradient(canvas.width / 2, wave.yOffset, canvas.width / 2, canvas.height);
+        // gradientDown.addColorStop(0, 'rgba(176, 224, 230, 0)');
+        // gradientDown.addColorStop(0.2, 'rgba(176, 224, 230, 0.2)');
+        // gradientDown.addColorStop(0.8, 'rgba(176, 224, 230, 0.2)');
+        // gradientDown.addColorStop(1, 'rgba(176, 224, 230, 0)');
+
+        // gray
         const gradientUp = ctx.createLinearGradient(canvas.width / 2, 0, canvas.width / 2, wave.yOffset);
-        gradientUp.addColorStop(0, 'rgba(173, 216, 230, 0)');
-        gradientUp.addColorStop(0.2, 'rgba(173, 216, 230, 0.2)');
-        gradientUp.addColorStop(0.8, 'rgba(173, 216, 230, 0.2)');
-        gradientUp.addColorStop(1, 'rgba(173, 216, 230, 0)');
+        gradientUp.addColorStop(0, 'rgba(220, 220, 220, 0)');
+        gradientUp.addColorStop(0.2, 'rgba(220, 220, 220, 0.2)');
+        gradientUp.addColorStop(0.8, 'rgba(220, 220, 220, 0.2)');
+        gradientUp.addColorStop(1, 'rgba(220, 220, 220, 0)');
 
         const gradientDown = ctx.createLinearGradient(canvas.width / 2, wave.yOffset, canvas.width / 2, canvas.height);
-        gradientDown.addColorStop(0, 'rgba(176, 224, 230, 0)');
-        gradientDown.addColorStop(0.2, 'rgba(176, 224, 230, 0.2)');
-        gradientDown.addColorStop(0.8, 'rgba(176, 224, 230, 0.2)');
-        gradientDown.addColorStop(1, 'rgba(176, 224, 230, 0)');
-        
+        gradientDown.addColorStop(0, 'rgba(240, 240, 240, 0)');
+        gradientDown.addColorStop(0.2, 'rgba(240, 240, 240, 0.2)');
+        gradientDown.addColorStop(0.8, 'rgba(240, 240, 240, 0.2)');
+        gradientDown.addColorStop(1, 'rgba(240, 240, 240, 0)');
 
         ctx.shadowBlur = 20;
         ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
@@ -216,9 +230,10 @@ function drawWaves() {
         wave.phase += wave.speed;
     });
 
-    setTimeout(() => {
-        requestAnimationFrame(drawWaves);
-    }, 25);
+    // setTimeout(() => {
+    //     requestAnimationFrame(drawWaves);
+    // }, 25);
+    requestAnimationFrame(drawWaves);
 }
 
 window.addEventListener('resize', () => {

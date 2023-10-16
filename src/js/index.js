@@ -1,5 +1,6 @@
-import {glitch} from "../../contexts/effects.js"
+import {_Text} from "../../contexts/effects.js"
 
-const Glitch = new glitch();
+const Text = new _Text();
 
-Glitch.Text("banner-text")
+Text.glitch("banner-text1", 1500);
+Text.glitch("banner-text2", 1500);
