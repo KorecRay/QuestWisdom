@@ -5,7 +5,9 @@
 body {
     width: 100%;
     background-color: rgb(57, 57, 57);
-    overflow: hidden;
+    /* overflow: hidden; */
+    overflow-x: hidden;
+    display: block;
 }
 
 /* NAV */
@@ -16,6 +18,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    position: sticky;
 }
 
 ._nav {
@@ -53,7 +56,7 @@ body {
     color: brown;
 }
 
-/* middle */
+/* banner */
 
 #canvas1 {
     animation: canvas1-in 2s ease-out;
@@ -71,7 +74,7 @@ body {
     }
 }
 
-.middle-top {
+.banner-top {
     display: flex;
 
     width: 100%;
@@ -79,6 +82,8 @@ body {
     position: fixed;
     top: 5vh;
     z-index: 100;
+    position: fixed;
+    top: 10vh;
 }
 
 .banner-text-cont {
@@ -117,4 +122,84 @@ body {
         text-shadow: 0 0 7px rgb(0, 47, 255),
                      0 0 12px rgb(120, 180, 255);
     }
+}
+
+.banner-bottom {
+    position: fixed;
+    bottom: 10vh;
+    width: 100%;
+    height: 30vh;
+    z-index: 100;
+}
+
+.welcome-cont {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-text {
+    color: rgb(0, 108, 180);
+    font-size: 7vh;
+    font-family: Audiowide, Arial, Helvetica, sans-serif;
+    animation: welcome-show 2s ease-out;
+    animation: welcome-color 5s infinite;
+}
+
+@keyframes welcome-show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes welcome-color {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(50deg);
+    }
+    100% {
+        fill: hue-rotate(0deg);
+    }
+}
+
+/* news block */
+
+.news {
+    width: 85%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.news-title {
+    display: flex;
+    width: 100%;
+    /* height: 2vh; */
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.news-title span {
+    text-align: center;
+    font-family: Audiowide, Arial, Helvetica, sans-serif;
+    font-size: 5vh;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px rgb(255, 255, 255),
+                 0 0 10px rgb(255, 255, 255);
+}
+
+.news-block {
+    width: 100%;
+    height: 20vh;
+
 }
