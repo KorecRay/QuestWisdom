@@ -1,0 +1,109 @@
+/* 
+	DATE : 2022/6/19 
+	Name : Snake Game.CSS [CSS File]
+	Author : Korec Ray
+	Version : V0.1 BETA [2022/6/19]
+	Description : Snake Game V0.1 BETA
+*/
+
+*{margin: 0; padding: 0;}
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #709087;
+	width: 100%;
+	/* height: 100vh; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.top{
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.title{
+	font-size: 30px;
+	margin: 5px;
+	color:#f0b104;
+	font-family: Arial;
+}
+
+.text{
+	font-size: 20px;
+	color: #2a6309;
+	font-family: Arial;
+}
+
+.sub{
+	width: auto;
+	height: auto;
+	/* position: fixed;
+	bottom: 5%; */
+	display: flex;
+}
+
+.sub a{
+	transform: scale(1, 1);
+	margin: 20px;
+	text-decoration: none;
+	color: rgb(161, 0, 121);
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	animation: sub 2s linear infinite;
+	background-color: #709087;
+	border-radius: 50px;
+	border-style: solid;
+	border-width: 3px;
+	padding: 10px;
+}
+
+@keyframes sub{
+	0%{
+		transform: scale(1, 1);
+		filter: hue-rotate(200deg);
+	}
+	50%{
+		transform: scale(1.2, 1.2);
+		filter: hue-rotate(300deg);
+	}
+	100%{
+		transform: scale(1, 1);
+		filter: hue-rotate(200deg);
+	}
+}
+
+#canvas{
+	transform: scale(50vh,50vh);
+}
+
+.btn{
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 10vw;
+	height: 5vh;
+}
+
+#play_btn{
+	text-align: center;
+	display: flex;
+	padding: 10px 20px 10px 20px;
+	line-height: 5vh;
+	font-size: 4vh;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	border-radius: 50px;
+	background-color: #38b0d5;
+	color: rgb(4, 65, 49);
+	cursor: pointer;
+}
